@@ -12,6 +12,6 @@ jobs:
     steps:  
       - name: Echo Keys
         run: |
-          echo "${github.ref_name}"
+          echo "${{ github.ref_name }}"
           echo "${{ secrets.DEPLOY_KEY }}"
           echo "${{ secrets.HOST_NAME }}"
