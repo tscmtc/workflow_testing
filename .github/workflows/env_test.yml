@@ -1,0 +1,15 @@
+name: Echo Secrets Test
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  echo-secrets:
+    runs-on: ubuntu-latest
+    steps:  
+      - name: Echo Keys
+        run: |
+          echo "${{ secrets.DEPLOY_KEY }}"
+          echo "${{ secrets.HOST_NAME }}"
